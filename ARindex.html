@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<script src="AR.js-master\aframe\build\aframe-ar.js"></script>
+	<script src="AR.js-master\aframe\build\aframe-ar.min.js"></script>
+	<a-scene embedded arjs='trackingMethod: best'>
+		<a-anchor hit-testing-enabled='true'>	
+			<a-torus  position="0 0.5 0" color="red" radius ="0.5">
+				<a-animation attribute="color"
+							duration="10000"
+							from="green"
+							to="red"
+							repeat="indefinite"></a-animation>
+			</a-torus>
+			<a-plane position="0 -1 0" width="3.5" height="3.5" color="purple" rotation="-55 0 0" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/illustration/758px-Canestra_di_frutta_(Caravaggio).jpg"></a-plane>
+			<a-box position="1.1  0.1 -2.5" width="0.5" height="0.5" color="red" rotation="0 4 0"></a-box>
+			<a-cylinder position="0 0 0" color="yellow" height="2" radius="0.05"></a-cylinder>
+			<a-cylinder position="1 0 0" color="blue" height="2" radius="0.05"></a-cylinder>			
+			<a-torus-knot color="orange" radius="0.5" position="1 0.5 0">
+				<a-animation attribute="rotation"
+							duration="10000"
+							fill="forwards"
+							to="0 0 360"
+							repeat="indefinite"></a-animation>
+			</a-torus-knot>
+			<a-plane position="0 1 -1" width="2.5" height="1.5" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/uvgrid/UV_Grid_Sm.jpg"></a-plane>
+			<a-text value="Welcome to the Fun House!" color="black" width="3" position="-1 0.5 -1"></a-text>
+
+		</a-anchor>
+		<a-camera-static/>
+		
+	</a-scene>
+</html>
