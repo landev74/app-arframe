@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
-	<script src="AR.js-master\aframe\build\aframe-ar.js"></script>
-	<script src="AR.js-master\aframe\build\aframe-ar.min.js"></script>
-	<a-scene embedded arjs='trackingMethod: best'>
-		<a-anchor hit-testing-enabled='true'>	
+	 <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+	 <script src="https://raw.githack.com/jeromeetienne/AR.js/2.2.2/aframe/build/aframe-ar.js"></script>
+	
+	
+	<a-scene embedded arjs>
+	
+		<a-marker preset="hiro" position= >
 			<a-torus  position="0 0.5 0" color="red" radius ="0.5">
 				<a-animation attribute="color"
 							duration="10000"
 							from="green"
 							to="red"
-							repeat="indefinite"></a-animation>
+							repeat="indefinite">
+				</a-animation>
 			</a-torus>
 			<a-plane position="0 -1 0" width="3.5" height="3.5" color="purple" rotation="-55 0 0" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/illustration/758px-Canestra_di_frutta_(Caravaggio).jpg"></a-plane>
 			<a-box position="1.1  0.1 -2.5" width="0.5" height="0.5" color="red" rotation="0 4 0"></a-box>
@@ -20,13 +24,15 @@
 							duration="10000"
 							fill="forwards"
 							to="0 0 360"
-							repeat="indefinite"></a-animation>
+							repeat="indefinite">
+				</a-animation>
 			</a-torus-knot>
 			<a-plane position="0 1 -1" width="2.5" height="1.5" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/uvgrid/UV_Grid_Sm.jpg"></a-plane>
 			<a-text value="Welcome to the Fun House!" color="black" width="3" position="-1 0.5 -1"></a-text>
-
-		</a-anchor>
-		<a-camera-static/>
+		</a-marker>
+		
+		<a-entity camera></a-entity>
+		
 		
 	</a-scene>
 </html>
